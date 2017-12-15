@@ -1,0 +1,12 @@
+import re
+
+if __name__ == '__main__':
+
+    pattern = '[a-ce-gi-oq-z0-9][a-z0-9][{a-df-qs-z}\s][{a-ce-z}\s]'
+    words = ['rap them', 'tapeth', 'apth', 'wrap/try', 'sap tray', '87ap9th', 'apothecary', 'aleht', 'happy them', 'tarpth', 'Apt', 'peth', 'tarreth', 'ddpdg']
+
+    for word in words:
+        if re.match(pattern, word):
+            print("La palabra " + word + " cumple.")
+        else:
+            print("La palabra " + word + " no cumple.")
